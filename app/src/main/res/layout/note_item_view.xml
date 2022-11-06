@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/orange">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/noteTitleOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="My title" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/noteTitleOutput"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/noteTitleOutput"
+                tools:layout_editor_absoluteX="25dp"
+                />
+
+            <TextView
+                android:id="@+id/noteDespOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/noteTitleOutput"
+                android:textColor="#616161"
+
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/noteTitleOutput"
+                app:layout_constraintTop_toBottomOf="@+id/noteTitleOutput"
+                tools:text="My note description" />
+
+            <TextView
+                android:id="@+id/noteTimeOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteDespOutput"
+                android:layout_marginTop="2dp"
+                android:gravity="end"
+                android:textColor="#616161"
+                app:layout_constraintEnd_toEndOf="@+id/noteDespOutput"
+                app:layout_constraintTop_toBottomOf="@+id/noteDespOutput"
+                tools:text="16 Oct 2022" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
